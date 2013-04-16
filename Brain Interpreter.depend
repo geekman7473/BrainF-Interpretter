@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1363035842 source:k:\programming\brainf interpreter\brain interpreter\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+
+1363310412 source:l:\programming\brainf interpreter\brain interpreter\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+
+1364765846 source:i:\programming\brainf interpreter\brain interpreter\main.cpp
+	<iostream>
+	<fstream>
+	<cstdlib>
+	<string>
+
