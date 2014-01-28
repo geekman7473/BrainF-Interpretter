@@ -8,7 +8,6 @@ string rawInputCode, inputCode;
 
 #define GRID_LENGTH 30000
 
-//void zeroArray(char *array_, long long length);
 long long terminatingBracket(unsigned long long curPos);
 long long beginBracket(unsigned long long curPos);
 
@@ -30,13 +29,10 @@ int main(int argc, char *argv[]){
         exit(EXIT_FAILURE);
     }
     rawInputCode.assign((std::istreambuf_iterator<char>(readCode)),(std::istreambuf_iterator<char>()));//reads all of readCode into RawInput
-    readCode.close()
+    readCode.close();
     for (long long j = 0; j < rawInputCode.length(); j++){
-        if (rawInputCode[j] == '>' || rawInputCode[j] == '<' || rawInputCode[j] == '+' || rawInputCode[j] == '-' || rawInputCode[j] == '.' || rawInputCode[j] == ',' || rawInputCode[j] == '[' || rawInputCode[j] == ']' || rawInputCode[j] == '#'){
-            inputCode = inputCode + rawInputCode[j];
-        }
+        inputCode = inputCode + rawInputCode[j];
     }
-    cout << inputCode << endl;
     for (unsigned long long i = 0; i < inputCode.length(); i++){
         switch (inputCode[i]) {
             case '>':
@@ -145,9 +141,10 @@ long long beginBracket(unsigned long long curPos){
            return(-1);
     }
 }
-/*void zeroArray(char *array_, long long length){
-    while(length-- > 0){
-        *array_ = 0;
-        array_++;
+bool isCommand(char c){
+    if (c == '>' || c == '<' || c == '+' || c == '-' || c == '.' || c == ',' || c == '[' || c == ']' || c == '#'){
+        return true;
+    } else {
+        return false;
     }
-}*/
+}
